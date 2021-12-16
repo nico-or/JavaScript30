@@ -65,8 +65,9 @@
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 
     //playsound
+    key.classList.toggle('playing');
     audio.currentTime = 0;
-    audio.play();
+    audio.play();    
   }
 
   // keypress listener
