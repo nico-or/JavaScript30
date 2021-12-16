@@ -60,7 +60,9 @@
 <script>
   // removes playing style after transitioning
   const removeStyle = function (e) {
+    if (e.propertyName !== "transform") return;
     console.log(e);
+    e.target.classList.toggle('playing');
   }
 
   // keypress
