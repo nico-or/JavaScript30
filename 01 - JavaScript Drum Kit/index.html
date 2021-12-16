@@ -60,11 +60,13 @@
 <script>
   // keypress
   const keyPress = function (e) {
-    console.log('test')
+    console.log(e);
+    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   }
 
   // keypress listener
-  window.addEventListener('keydown', keyPress)
+  window.addEventListener('keydown', keyPress);
 </script>
 
 </body>
