@@ -65,6 +65,7 @@
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 
     //playsound
+    audio.currentTime = 0;
     audio.play();
   }
 
