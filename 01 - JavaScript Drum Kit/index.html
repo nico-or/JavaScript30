@@ -61,13 +61,13 @@
   // removes playing style after transitioning
   const removeStyle = function (e) {
     if (e.propertyName !== "transform") return;
-    console.log(e);
+    //console.log(e);
     e.target.classList.remove('playing');
   }
 
   // keypress
   const keyPress = function (e) {
-    console.log(e);
+    //console.log(e);
     const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 
