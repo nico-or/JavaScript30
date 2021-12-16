@@ -58,6 +58,11 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+  // removes playing style after transitioning
+  const removeStyle = function (e) {
+    console.log(e);
+  }
+
   // keypress
   const keyPress = function (e) {
     console.log(e);
@@ -70,6 +75,10 @@
     audio.play();    
   }
 
+  // add trigger to remove playing style
+  const keys = document.querySelectorAll(".key");
+  keys.forEach(key => key.addEventListener('transitionend', removeStyle));
+  
   // keypress listener
   window.addEventListener('keydown', keyPress);
 </script>
